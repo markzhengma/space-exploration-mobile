@@ -1,0 +1,216 @@
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141677211-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-141677211-1');
+    </script>
+  <script src="jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+  <!-- <div id = "back_btn_div">
+        <i id = "back_btn" class="fas fa-home"></i>
+    </div> -->
+  <div id="username_div" class="div_show">
+    <div id="logo_div">
+      <div id="logo"></div>
+    </div>
+    <!-- <div class = "circle_animated" style = "height: 100px; width: 100px; position: absolute; background-image: url('./Images/circle_1.png'); background-position: center; background-size: cover; z-index: 0;"></div>
+        <div class = "circle_animated" style = "height: 100px; width: 100px; position: absolute; background-image: url('./Images/circle_2.png'); background-position: center; background-size: cover; z-index: 0;"></div>
+        <div class = "circle_animated" style = "height: 100px; width: 100px; position: absolute; background-image: url('./Images/circle_3.png'); background-position: center; background-size: cover; z-index: 0;"></div>
+        <div class = "circle_animated" style = "height: 100px; width: 100px; position: absolute; background-image: url('./Images/circle_4.png'); background-position: center; background-size: cover; z-index: 0;"></div> -->
+    <div id="username_group">
+      <div id="username_group_p">
+        <h3>SPACE<br />EXPLORATION LAB</h3>
+        <p>Ready to launch your very own lightsail into the cosmic void?</p>
+        <p>Great! Pick a name for your lightsail to get started!</p>
+      </div>
+      <div id="username_input_group">
+        <h4>NAME</h4>
+        <input type="text" id="username_input" class="form-control" placeholder="Martin">
+      </div>
+      <!-- <div id = "email_input_group">
+                <h4>EMAIL</h4>
+                <input type="email" id = "email_input" class="form-control" placeholder = "martin@mars.com">
+            </div> -->
+      <!-- <input type="email" id = "email_input" class="form-control" placeholder="Your Email"> -->
+      <button id="username_confirm" class="btn">LET'S GO</button>
+      <!-- <div class="input-group-append">
+                <button id = "username_confirm" class="btn" type="submit">Go</button>
+            </div> -->
+    </div>
+  </div>
+  <div id="sketch_div" class="div_hide">
+    <div id="sketch_description">
+      <div id="sketch_description_title">
+        <h4>1. PAINT YOUR<br />LIGHT SAIL</h4>
+      </div>
+      <div id="image_confirm_div">
+        <button id="image_confirm" type="button" class="btn">DONE!</button>
+      </div>
+    </div>
+    <div id="sketch_panel">
+      <!-- <canvas id = "sketch_canvas" width="300" height = "300"></canvas> -->
+      <div id="color_panel">
+        <div class="color_panel_row">
+          <div class="color_btn" key=0 value="#0e41f1" style="background-color: #0e41f1"></div>
+          <div class="color_btn" key=1 value="#f12bb1" style="background-color: #f12bb1"></div>
+          <div class="color_btn" key=2 value="#ed550d" style="background-color: #ed550d"></div>
+          <div class="color_btn" key=3 value="#ffd050" style="background-color: #ffd050"></div>
+          <div class="color_btn" key=4 value="#ffffff" style="background-color: #ffffff"></div>
+        </div>
+        <div class="color_panel_row">
+          <div class="color_btn" key=5 value="#7eeaff" style="background-color: #7eeaff"></div>
+          <div class="color_btn" key=6 value="#f87994" style="background-color: #f87994"></div>
+          <div class="color_btn" key=7 value="#f58f5b" style="background-color: #f58f5b"></div>
+          <div class="color_btn" key=8 value="#fbbce4" style="background-color: #fbbce4"></div>
+          <div class="color_btn" key=9 value="#000000" style="background-color: #000000"></div>
+        </div>
+      </div>
+      <div id="color_option_panel">
+        <div class="color_option color_option_normal btn" id="option_pencil" value="pencil"><i class="fas fa-pencil-alt"></i>PENCIL</div>
+        <div class="color_option color_option_normal btn" id="option_fill" value="eraser"><i class="fas fa-eraser"></i>ERASER</div>
+        <!-- <div id = "reset_btn"><i class="fas fa-redo"></i></div> -->
+      </div>
+    </div>
+  </div>
+  <div id="generate_div" class="div_hide">
+    <div id="generate_description">
+      <div id="generate_title">
+        <h4>2. PREVIEW YOUR<br />LIGHTSAIL</h4>
+      </div>
+    </div>
+    <canvas id="review_canvas"></canvas>
+    <div id="generate_bg">
+      <div class="generate_layer" id="shape">
+        <!-- <div class = "generate_layer" id = "earth">
+                    <div class = "generate_layer" id = "shadow"> -->
+        <div id="generate_preview">
+        </div>
+        <!-- </div>
+                </div> -->
+      </div>
+    </div>
+    <div id="generate_btn_group">
+      <div id="image_back_btn" class="btn generate_btn"><i class="fas fa-undo-alt"></i>GO BACK</div>
+      <div id="save_btn" class="btn generate_btn"><i class="far fa-thumbs-up"></i>ALL SET</div>
+    </div>
+  </div>
+  <div id="nav_div" class="div_hide">
+    <div id="nav_description">
+      <div id="nav_title">
+        <h4>3. NAVIGATE<br />YOUR LIGHTSAIL</h4>
+      </div>
+      <div id="share_btn_div">
+        <button id="share_btn" type="button" class="btn"></button>
+        <b>share</b>
+      </div>
+    </div>
+    <!-- https://
+            firebasestorage.googleapis.com
+            /v0
+            /b
+            /space-explore.appspot.com
+            /o
+            /Images
+            %2F-LeoDsAwyQAm_u263N5t
+            ?alt
+            =media
+            &token
+            =23525183-da4f-41ca-96d0-e36921f33eca
+
+            https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F
+            firebasestorage.googleapis.com
+            %2Fv0
+            %2Fb
+            %2Fspace-explore.appspot.com
+            %2Fo
+            %2FImages
+            %252F-LeoDsAwyQAm_u263N5t
+            %3Falt
+            %3Dmedia
+            %26token
+            %3D23525183-da4f-41ca-96d0-e36921f33eca
+            &amp;src=sdkpreparse
+
+             -->
+    <!-- <div class="fb-share-button" data-href="https://firebasestorage.googleapis.com/v0/b/space-explore.appspot.com/o/Images%2F-LeoDsAwyQAm_u263N5t?alt=media&amp;token=23525183-da4f-41ca-96d0-e36921f33eca" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fspace-explore.appspot.com%2Fo%2FImages%252F-LeoDsAwyQAm_u263N5t%3Falt%3Dmedia%26token%3D23525183-da4f-41ca-96d0-e36921f33eca&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            <div class="fb-share-button" data-href="http://markzhengma.com" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmarkzhengma.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div> -->
+    <div id="nav_group">
+      <button value="-1" type="button" name="xforce_btn" class="btn navi_btn xy_btn"><i class="fas fa-angle-left"></i>LEFT</button>
+      <div id="y_z_group">
+        <button value="1" type="button" name="zforce_btn" class="btn navi_btn z_btn"><i class="fas fa-angle-double-up"></i>IN</button>
+        <button value="1" type="button" name="yforce_btn" class="btn navi_btn xy_btn"><i class="fas fa-angle-up"></i>UP</button>
+        <button value="0" type="button" name="yforce_btn" class="btn xy_btn" id="nav_center"></button>
+        <button value="-1" type="button" name="yforce_btn" class="btn navi_btn xy_btn"><i class="fas fa-angle-down"></i>DOWN</button>
+        <button value="-1" type="button" name="zforce_btn" class="btn navi_btn z_btn"><i class="fas fa-angle-double-down"></i>OUT</button>
+      </div>
+      <button value="1" type="button" name="xforce_btn" class="btn navi_btn xy_btn"><i class="fas fa-angle-right"></i>RIGHT</button>
+    </div>
+    <div id="nav_instruction">
+      <h5 id="instruction_title">CONTROL INFO <i class='fas fa-minus-square'></i></h5>
+      <p id="instruction_p">
+        up - go up<br />down - go down<br />left - go left<br />right - go right<br />
+        forward - go into screen<br />backward - go towards screen
+      </p>
+    </div>
+  </div>
+  <div id="share_div" class="div_hide">
+    <div id="share_description">
+      <div id="share_title">
+        <h4>SHARE YOUR<br />MOMENTS</h4>
+      </div>
+      <div id="share_p">
+        <p>Light Sail will continue its journey of space exploration. Thank you for your contribution!</p>
+      </div>
+    </div>
+    <div id="share_content"><img id="share_content_img" src="Images/loading_img.png"></div>
+    <div id="share_btn_group">
+      <div>
+        <p>Tap the image and hold to download this moment to your phone!</p>
+      </div>
+      <!-- <a id = "share_btn_download" download><button type = "button" class="btn share_page_btn">DOWNLOAD AND SHARE</button></a> -->
+      <button id="share_btn_back" type="button" class="btn share_page_btn">BACK TO NAVIGATION</button>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase production environment
+    var config = {
+        apiKey: "AIzaSyBkqSPvLge7ABmA1r7uemnkQmvZfMsHTrQ",
+        authDomain: "space-explore.firebaseapp.com",
+        databaseURL: "https://space-explore.firebaseio.com",
+        projectId: "space-explore",
+        storageBucket: "space-explore.appspot.com",
+        messagingSenderId: "895102884234"
+    };
+
+    firebase.initializeApp(config);
+  </script>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
